@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13'
+}
+
+application {
+    mainClassName = 'CharacterSorter'
+}
+
+test {
+    useJUnit()
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'CharacterSorter'
+    }
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
